@@ -2,14 +2,17 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = 3000;
+const addEmailToMailChimp = require('./PostMailChimp');
 
 app.use(bodyParser.json());
 
-app.listen(PORT,() => {
- console.log(`server running on port ${PORT}`)
+app.listen(PORT, () => {
+  console.log(`server running on port ${PORT}`)
 });
 
 app.post('/', (req, res) => {
-  console.log(req.body.email);
+  let email = req.body.email;
+  addEmailToMailChimp(email);
   res.send('ok')
 });
+
