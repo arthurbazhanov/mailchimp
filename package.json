@@ -1,0 +1,16 @@
+{
+  "name": "mailchimp",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5",
+    "request-promise": "^4.2.2"
+  }
+}
