@@ -16,9 +16,7 @@ function addEmailToMailChimp(email) {
     json: true
   };
 
-  request(options)
-    .then(body => console.log(body))
-    .catch(e => console.log(e));
+   request(options)
 }
 
 module.exports = addEmailToMailChimp;
